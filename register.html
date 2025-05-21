@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar - Call-up Career</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Daftar Akun Baru</h2>
+    <form id="registerForm" onsubmit="return handleRegister(event)">
+      <label for="newUsername">Username:</label>
+      <input type="text" id="newUsername" required>
+
+      <label for="newPassword">Password:</label>
+      <input type="password" id="newPassword" required>
+
+      <button type="submit">Daftar</button>
+    </form>
+    <p style="margin-top: 10px;"><a href="login.html">Kembali ke login</a></p>
+    
+  </div>
+
+  <script>
+    function handleRegister(event) {
+      event.preventDefault();
+      const newUsername = document.getElementById("newUsername").value;
+      const newPassword = document.getElementById("newPassword").value;
+
+      // Simpan di localStorage
+      localStorage.setItem("registeredUsername", newUsername);
+      localStorage.setItem("registeredPassword", newPassword);
+
+      alert("Pendaftaran berhasil! Silakan login.");
+      window.location.href = "home.html";
+    }
+  </script>
+</body>
+</html>

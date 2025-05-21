@@ -1,0 +1,516 @@
+/* =========================
+   GLOBAL RESET & FONTS
+========================= */
+body, h1, h2, h3, h4, h5, h6, p, a, input, button {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY & GENERAL LAYOUT
+========================= */
+body {
+  background: linear-gradient(to right, #d5d6d7, #296ea2);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   FORM STYLE
+========================= */
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #003d99;
+}
+
+/* =========================
+   VALIDASI & HASIL
+========================= */
+#result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f0f8ff;
+  border-left: 4px solid #0052cc;
+  border-radius: 6px;
+}
+
+#score {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.phone-validation-toggle {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.phone-validation-toggle input[type="checkbox"] {
+  margin-right: 4px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.phone-validation-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+.login-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  margin-top: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background-color: #4582c4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #061756;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #007BFF; /* Warna checkbox saat dicentang (biru profesional) */
+  cursor: pointer;
+}
+
+.checkbox-row label {
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+
+
+/* Responsive Login */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 24px;
+  }
+
+  .login-container h2 {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   LOGIN BUTTON ON MAIN PAGE
+========================= */
+.login-button {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #003366;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  float: right;
+  margin-top: -3rem;
+  margin-right: 1rem;
+}
+
+.login-button:hover {
+  background-color: #ffc107;
+}
+
+/* =========================
+   WARNING BOX COMPONENT
+========================= */
+.warning-box {
+  background: linear-gradient(to bottom right, #fff9e6, #fff3cd);
+  border: 1px solid #ffe8a1;
+  color: #5a4300;
+  padding: 2.5rem 2rem;
+  border-radius: 14px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.warning-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.warning-content h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #5a4300;
+  border-bottom: 2px solid #ffd966;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+.warning-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4d3c00;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* =========================
+   PRIVACY POLICY PAGE
+========================= */
+.privacy-policy {
+  background-color: #303366;
+  color: white;
+  padding: 2rem;
+  border-radius: 40px;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.privacy-policy h1,
+.privacy-policy h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.privacy-policy ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.last-updated {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #d5d6d7, #296ea2);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Pastikan footer tidak meloncat ke tengah */
+.footer {
+  text-align: center;
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+}
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background-color: #fff;
+}
+.login-container h2 {
+  text-align: center;
+}
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.login-container button:hover {
+  background-color: #005fa3;
+}
+/* Tombol "Kembali ke Beranda" */
+.home-button {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #003366;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #ffc107;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+.about-html {
+  background-color: #303366;
+  color: white;
+  padding: 2rem;
+  border-radius: 40px;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.about-html h1,
+.about-html h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.about-html ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+/* =========================
+   INTRO PAGE
+========================= */
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Overlay */
+.intro-overlay {
+  background: linear-gradient(to bottom right, #e6e9eb, #296ea2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Logo */
+.intro-logo {
+  width: 100vw;
+  max-width: 280px;
+  min-width: 140px;
+  height: auto;
+  margin-bottom: 1.2rem;
+  animation: scaleIn 1s ease-out;
+}
+
+/* Judul Aplikasi */
+.intro-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1.3s ease-out;
+}
+
+/* Loader */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ffcc00;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-top: 10px;
+}
+
+/* Animasi */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsif teks */
+@media (max-width: 480px) {
+  .intro-title {
+    font-size: 1.4rem;
+  }
+
+  .loader {
+    width: 40px;
+    height: 40px;
+  }
+}

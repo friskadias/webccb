@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Call-up Career</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return handleLogin(event)">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Link ke halaman pendaftaran akun -->
+    <p style="margin-top: 10px;">Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault(); // Mencegah form submit default
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Ambil data akun dari localStorage
+      const savedUsername = localStorage.getItem("registeredUsername");
+      const savedPassword = localStorage.getItem("registeredPassword");
+
+      if (
+        (username === "admin" && password === "admin123") ||
+        (username === savedUsername && password === savedPassword)
+      ) {
+        alert("Login berhasil!");
+        window.location.href = "home.html"; // Arahkan ke halaman utama
+      } else {
+        alert("Username atau password salah.");
+      }
+    }
+  </script>
+</body>
+</html>
